@@ -1,138 +1,279 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>רונית אורנן – ייעוץ זוגי ומיני</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <title>רונית אורנן – אינטימיות, זוגיות וייעוץ מיני</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet" />
   <style>
     body {
-      font-family: 'Arial', sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #FFF6F2;
       color: #333;
       margin: 0;
       direction: rtl;
     }
 
-    /* סרגל ניווט */
+    header {
+      background-color: #F3CACA;
+      padding: 30px 20px 15px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+      line-height: 1.2;
+    }
+
+    header h2 {
+      margin-top: 8px;
+      font-size: 20px;
+      font-weight: normal;
+      font-family: 'Varela Round', sans-serif;
+      color: #7A3C3C;
+    }
+
     nav {
-      background-color: #B85656;
-      padding: 12px 20px;
-      display: flex;
-      justify-content: center;
+      background-color: #E8B8B8;
+      padding: 10px 0;
+      text-align: center;
     }
 
     nav a {
-      color: white;
+      color: #333;
       text-decoration: none;
       margin: 0 15px;
-      font-size: 18px;
       font-weight: bold;
+      font-size: 16px;
     }
 
     nav a:hover {
       text-decoration: underline;
     }
 
-    header {
-      background-color: #F3CACA;
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 32px;
-    }
-
-    header p {
-      font-size: 18px;
-      margin-top: 10px;
-    }
-
     .about-section {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       align-items: center;
+      justify-content: center;
       padding: 40px 20px;
-      max-width: 900px;
+      max-width: 1000px;
       margin: 0 auto;
-      text-align: center;
+      flex-wrap: wrap;
+      gap: 30px;
     }
 
     .about-section img {
-      width: 260px;
-      max-width: 100%;
-      height: auto;
+      width: 280px;
       border-radius: 12px;
-      margin-bottom: 20px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
 
-    .about-section p {
-      font-size: 20px;
-      line-height: 1.7;
+    .about-text {
       max-width: 600px;
+      text-align: right;
     }
 
-    .button-link {
-      display: inline-block;
+    .about-text h3 {
+      font-size: 22px;
+      margin-bottom: 20px;
+      color: #B85656;
+    }
+
+    .about-text p {
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    .contact-section {
+      background-color: #fff;
+      padding: 30px 20px 20px;
+      max-width: 600px;
+      margin: 40px auto 60px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .contact-section h3 {
+      text-align: center;
+      color: #B85656;
+      margin-bottom: 20px;
+      font-weight: 600;
+      font-size: 24px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .contact-row {
+      display: flex;
+      gap: 12px;
+    }
+
+    .contact-row input {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #EAD9D2;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    textarea {
+      padding: 10px;
+      border: 1px solid #EAD9D2;
+      border-radius: 6px;
+      font-size: 16px;
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    button {
       background-color: #B85656;
       color: white;
-      padding: 14px 24px;
+      padding: 12px;
+      border: none;
       border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
       font-size: 18px;
-      margin-top: 30px;
+      cursor: pointer;
       transition: background-color 0.3s ease;
     }
 
-    .button-link:hover {
-      background-color: #8c3d3d;
+    button:hover {
+      background-color: #9b4545;
     }
 
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 26px;
+    .contact-options {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .social-link {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      color: #555;
+      font-weight: bold;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    .social-link:hover {
+      color: #B85656;
+    }
+
+    .social-link img {
+      width: 18px;
+      height: 18px;
+      transition: filter 0.3s ease;
+    }
+
+    @media (max-width: 768px) {
+      .about-section {
+        flex-direction: column;
+        text-align: center;
       }
 
-      .about-section p {
-        font-size: 18px;
+      .about-text {
+        text-align: center;
       }
 
-      nav a {
-        font-size: 16px;
-        margin: 0 10px;
+      .contact-row {
+        flex-direction: column;
       }
+    }
 
-      .button-link {
-        font-size: 16px;
-        padding: 12px 20px;
-      }
+    /* -------- סיידבר וואטסאפ בצד ימין למטה -------- */
+    .whatsapp-sidebar {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s ease;
+      z-index: 9999;
+    }
+
+    .whatsapp-sidebar:hover {
+      background-color: #1ebe57;
+    }
+
+    .whatsapp-sidebar img {
+      width: 28px;
+      height: 28px;
+      filter: drop-shadow(0 0 0.5px rgba(0,0,0,0.15));
     }
   </style>
 </head>
 <body>
 
+  <header>
+    <h1>רונית אורנן</h1>
+    <h2>אינטימיות, זוגיות וייעוץ מיני</h2>
+  </header>
+
   <nav>
     <a href="index.html">דף הבית</a>
+    <a href="about.html">אודות</a>
     <a href="index2.html">צור קשר</a>
   </nav>
 
-  <header>
-    <h1>רונית אורנן</h1>
-    <p>ייעוץ זוגי ומיני לנשים ולזוגות</p>
-  </header>
-
   <section class="about-section">
-    <img src="Screenshot 2025-05-26 102209.jpg" alt="רונית אורנן – תמונה אישית">
-    <p>
-      ייעוץ זוגי ומיני לנשים וזוגות שרוצים לשפר את התקשורת ואת איכות החיים האינטימיים, ולבנות זוגיות מאוזנת ובריאה.<br>
-      ההבנה שמגיע לנו להיות מאושרים – שמגיע לנו יותר – זאת המוטיבציה שלי.
-    </p>
-
-    <a href="index2.html" class="button-link">דברו איתי</a>
+    <img src="Screenshot 2025-05-26 102209.jpg" alt="רונית אורנן" />
+    <div class="about-text">
+      <h3>על אינטימיות וזוגיות כי כל רגע משנה</h3>
+      <p>
+        ייעוץ זוגי ומיני לנשים וזוגות שרוצים לשפר את התקשורת ואת איכות החיים האינטימיים ולבנות זוגיות מאוזנת ובריאה.<br />
+        ההבנה שמגיע לנו להיות מאושרים! שמגיע לנו יותר – זאת המוטיבציה שלי.
+      </p>
+    </div>
   </section>
+
+  <section class="contact-section">
+    <h3>צור קשר</h3>
+    <form action="https://formspree.io/f/xpwdgynn" method="POST">
+      <div class="contact-row">
+        <input type="text" name="name" placeholder="שם מלא" required />
+        <input type="email" name="email" placeholder="דוא״ל" required />
+      </div>
+      <textarea name="message" placeholder="הודעה" required></textarea>
+      <button type="submit">שליחה</button>
+    </form>
+
+    <div class="contact-options">
+      <a class="social-link" href="https://wa.me/972544230019" target="_blank" rel="noopener noreferrer">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp" />
+        WhatsApp
+      </a>
+      <a class="social-link" href="https://www.facebook.com/profile.php?id=61572770842357" target="_blank" rel="noopener noreferrer">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" />
+        Facebook
+      </a>
+      <a class="social-link" href="https://www.instagram.com/ronit_ornan" target="_blank" rel="noopener noreferrer">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" />
+        Instagram
+      </a>
+    </div>
+  </section>
+
+  <!-- סיידבר וואטסאפ -->
+  <a href="https://wa.me/972544230019" target="_blank" rel="noopener noreferrer" class="whatsapp-sidebar" aria-label="צור קשר בוואטסאפ">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp" />
+  </a>
 
 </body>
 </html>
