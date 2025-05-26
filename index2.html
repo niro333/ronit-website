@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>צור קשר – רונית אורנן</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #FFF6F2;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      direction: rtl;
+    }
+
+    nav {
+      background-color: #B85656;
+      padding: 12px 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      background-color: #F3CACA;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 30px;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 18px;
+    }
+
+    .form-container {
+      max-width: 600px;
+      margin: 40px auto;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 1px solid #EAD9D2;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: #B85656;
+      color: white;
+      padding: 14px 24px;
+      border: none;
+      border-radius: 8px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #8c3d3d;
+    }
+
+    .social {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .social a {
+      color: #B85656;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .social a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 24px;
+      }
+
+      nav a {
+        font-size: 16px;
+        margin: 0 10px;
+      }
+
+      button {
+        font-size: 16px;
+        padding: 12px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">דף הבית</a>
+    <a href="index2.html">צור קשר</a>
+  </nav>
+
+  <header>
+    <h1>צור קשר</h1>
+    <p>מוזמנים להשאיר פרטים ואחזור אליכם בהקדם</p>
+  </header>
+
+  <div class="form-container">
+    <form action="https://formspree.io/f/xpwdgynn" method="POST">
+      <label for="name">שם מלא</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">דוא"ל</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">הודעה</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">שליחה</button>
+    </form>
+
+    <div class="social">
+      <p>או צרו קשר דרך הפייסבוק:</p>
+      <a href="https://www.facebook.com/profile.php?id=61572770842357" target="_blank">
+        רונית אורנן – בפייסבוק
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>
